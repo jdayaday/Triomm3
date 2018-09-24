@@ -1,0 +1,7 @@
+{
+	"facebook": {
+		"access_token": "FB_ACCESS_TOKEN",
+		"app_secret": "FB_APP_SECRET",
+		"verify_token": "FB_VERIFY_TOKEN"
+	}
+}

@@ -1,0 +1,15 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "Facebook Messenger bot for Triomm3",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonathan Dayaday",
+  "license": "ISC",
+  "dependencies": {
+    "bootbot": "^1.0.16",
+    "config": "^2.0.1"
+  }
+}
