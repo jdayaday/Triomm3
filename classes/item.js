@@ -1,15 +1,9 @@
-const ITEM_CARD_HEIGHT = {
-	COMPACT: 'compact',
-	TALL: 'tall',
-	FULL: 'full'
-}
-
 class ItemCard {
-	constructor(title, image_url, item_url, itemcard_height, buttons) {
+	constructor(title, image_url, item_url, webview_height_ratio, buttons) {
 		this._title = title;
 		this._image_url = image_url;
 		this._item_url = item_url;
-		this._itemcard_height = itemcard_height;
+		this._webview_height_ratio = webview_height_ratio;
 		this._buttons = buttons;
 	}
 	
@@ -34,11 +28,11 @@ class ItemCard {
 		return this._item_url;
 	}
 	
-	set itemcard_height(itemcard_height) {
-		this._webview_height = itemcard_height;
+	set webview_height_ratio(webview_heigth_ratio) {
+		this._webview_height_ratio = webview_heigth_ratio;
 	}
-	get itemcard_height() {
-		return this._itemcard_height;
+	get webview_height_ratio() {
+		return this._webview_height_ratio;
 	}
 	
 	set buttons(buttons) {
@@ -55,14 +49,11 @@ class ItemCard {
 			default_action: {
 				type: 'web_url',
 				url: this._item_url,
-				webview_height_ratio: this._itemcard_height
+				webview_height_ratio: this._webview_height_ratio
 			},
 			buttons: this._buttons
 		};
 	}
 }
 
-module.exports = {
-	'ItemCard': ItemCard,
-	'ITEM_CARD_HEIGHT': ITEM_CARD_HEIGHT
-};
+module.exports = ItemCard;
